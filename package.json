@@ -1,0 +1,38 @@
+{
+  "name": "gulp-npm-version",
+  "description": "Checks if your NPM dependencies are out of date.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "homepage": "https://github.com/bastienmoulia/gulp-npm-version",
+  "author": {
+    "name": "Bastien Moulia",
+    "email": "bastienmoulia@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bastienmoulia/gulp-npm-version.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bastienmoulia/gulp-npm-version/issues"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "gulp-util": "~3.0.6",
+    "async": "^1.4.2",
+    "lodash": "^3.10.1",
+    "npm": "^2.14.2",
+    "semver": "^5.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "keywords": [
+    "gulpplugin",
+    "npm",
+    "update",
+    "version",
+    "check",
+    "gulp"
+  ]
+}
