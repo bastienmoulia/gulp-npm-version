@@ -2,7 +2,6 @@
 
 var through = require('through2');
 var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
 var _ = require('lodash');
 var semver = require('semver');
 var npm = require('npm');
@@ -44,24 +43,20 @@ var gulpNpmVersion = function (options) {
                 }
               }
             });
-            
             //done();
           });
         });
       _.each(allDependencies, function(value, key) {
         if (semver.validRange(value)) {
           var dependency = {
-            "name": key,
-            "version": value
+            'name': key,
+            'version': value
           };
           npmCallback(dependency);
         } else {
           gutil.log('Incorrect semver for ' + key + ' : ' + value);
         }
-        dependencyCalls.push(npmCallback(dependency))
-        
-        
-        
+        dependencyCalls.push(npmCallback(dependency));
       });
       //gutil.log(allDependencies);
     }
