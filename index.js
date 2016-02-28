@@ -47,6 +47,12 @@ var gulpNpmVersion = function (options) {
           });
         });
       _.each(allDependencies, function(value, key) {
+        if (value.indexOf('#') > -1) {
+          gutil.log('Custom semver for ' + key + ' : ' + value);
+          var split = value.split('#');
+          key = split[0];
+          value = split[1];
+        }
         if (semver.validRange(value)) {
           var dependency = {
             'name': key,
