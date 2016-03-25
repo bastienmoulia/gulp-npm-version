@@ -20,3 +20,11 @@ gulp.task('npm-version', function() {
     .pipe(npmVersion());
 });
 ```
+
+## Options
+
+#### showUpToDate
+Type: `Boolean`
+Default value: `false`
+
+If true, dependencies that are out of date will be listed.

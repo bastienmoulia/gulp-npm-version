@@ -6,7 +6,9 @@ gulp.task('default', ['npm-version', 'lint']);
 
 gulp.task('npm-version', function() {
   return gulp.src('./package.json')
-    .pipe(npmVersion());
+    .pipe(npmVersion({
+      showUpToDate: false
+    }));
 });
 
 gulp.task('lint', function () {

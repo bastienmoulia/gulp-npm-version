@@ -38,7 +38,7 @@ var gulpNpmVersion = function (options) {
               if (!result.upToDate) {
                 gutil.log(result.name + ' is out of date. Your version: ' + result.version + ' latest: ' + result.latest);
               } else {
-                if (!options.hideUpToDate) {
+                if (options.showUpToDate) {
                   gutil.log(result.name + ' is up to date.');
                 }
               }
